@@ -11,11 +11,12 @@
 
   <tbody>
     <% @books.each do |book| %>
-    <tr>
-      # 作成途中<td><%= image_tag post_image.user.get_profile_image(100,100)</td>
-      <td><%= book.title %></td>
-      <td><%= book.opinion %></td>
-    </tr>
+     <tr>
+       <!--<td><%= book.user.[:id] %></td>-->
+       <td><%= book.title %></td>
+       <td><%= book.opinion %></td>
+     </tr>
+     <% end %>
   </tbody>
 
 </table>
