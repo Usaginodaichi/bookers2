@@ -10,7 +10,7 @@
 
       <h2>Users info</h2>
        <% if user.profile_image.attached? %>
-        <%= image_tag users.get_profile_image(100,100) %>
+        <%= image_tag user.get_profile_image(100,100) %>
        <% else %>
         <%= image_tag'no_image.jpg' %>
        <% end %>

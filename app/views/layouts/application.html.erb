@@ -89,14 +89,12 @@
     </header>
 
     <main>
+
+    <div class="text-success">
     <% flash.each do |key, value| %>
      <%= content_tag(:div, value, class: "#{key}") %>
     <% end %>
-
-    <p id="notice"></p>
-     <div class="text-success">
-      <%= flash[:notice] %>
-     </div>
+    </div>
 
 
     <%= yield %>
