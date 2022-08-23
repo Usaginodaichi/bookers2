@@ -1,5 +1,5 @@
 class Book < ApplicationRecord
-  belongs_to:user
+  belongs_to :user
 
   # def get_image
    # unless image.attached?
