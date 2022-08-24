@@ -63,7 +63,7 @@
               </li>
 
               <li>
-                <%= link_to about_path, class:'nav-link text-light' do %>
+                <%= link_to home_about_path, class:'nav-link text-light' do %>
                  <i class="fas fa-link"></i>
                  About
                 <% end %>
@@ -89,13 +89,7 @@
     </header>
 
     <main>
-
-    <div class="text-success">
-    <% flash.each do |key, value| %>
-     <%= content_tag(:div, value, class: "#{key}") %>
-    <% end %>
-    </div>
-
+    <p class="notice"><%= notice %></p>
 
     <%= yield %>
     </main>

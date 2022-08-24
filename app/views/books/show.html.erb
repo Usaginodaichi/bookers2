@@ -8,22 +8,19 @@
        <tbody>
          <tr>
           <td>
-           <%= link_to user_path(@book2.id) do %>
-            <% if @book2.user.profile_image.attached? %>
-              <%= image_tag @book2.user.get_profile_image(100,100) %>
-            <% else %>
-              <%= image_tag'no_image.jpg' %>
-            <% end %>
+           <% if @book2.user.profile_image.attached? %>
+            <%= link_to image_tag @user.get_profile_image(100,100) %>
+           <% else %>
+            <%= link_to image_tag('no_image.jpg') %>
            <% end %>
-          <br><%= link_to @book2.user.name, user_path(@book2.id)  %></td>
-          <td><%= link_to @book2.title, book_path(@book2.id) %></td>
+          <br><%= link_to @user.name, user_path(@user)  %></td>
+          <td><%= link_to @book2.title, book_path(@book2) %></td>
           <td><%= @book2.body %></td>
           <% if @book2.user == current_user %>
            <td><%= link_to"Edit", edit_book_path(@book2.id), class:'btn btn-sm btn-success' %></td>
            <td><%= link_to"Destroy", book_path(@book2.id), method: :delete, "data-confirm" => "本当に消しますか？", class:'btn btn-sm btn-danger' %></td>
           <% end %>
          </tr>
-        <!--%= paginate books % -->
        </tbody>
       </table>
     </div>
